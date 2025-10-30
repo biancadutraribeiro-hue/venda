@@ -1,0 +1,184 @@
+   <section class="products">
+        <h2>Produtos em Destaque</h2>
+        <div class="product-list">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <img src="assets/roupa1.jpg" alt="Camiseta Estilosa">
+                <h3>Camiseta Estilosa</h3>
+                <p>R$ 49,99</p>
+                <button class="btn">Comprar</button>
+            </div>
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="assets/roupa2.jpg" alt="Jaqueta Fashion">
+                <h3>Jaqueta Fashion</h3>
+                <p>R$ 199,99</p>
+                <button class="btn">Comprar</button>
+            </div>
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="assets/roupa3.jpg" alt="Calça Jeans">
+                <h3>Calça Jeans</h3>
+                <p>R$ 129,99</p>
+                <button class="btn">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contato</h2>
+        <form action="mailto:seuemail@dominio.com" method="POST" enctype="text/plain">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Minha Loja de Roupas - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.contact {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form input, .contact form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Produto adicionado ao carrinho!');
+    });
+});
